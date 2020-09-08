@@ -1,0 +1,14 @@
+//removeDuplicates([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]); --> ["1", "2", "3", "4", "5", "6", "7", "8"]
+
+function removeDuplicates(num) {
+  const out=[];
+  const obj={};
+
+  for (let x=0; x<num.length; x++) {
+    obj[num[x]]=0;
+  }
+  for (let x in obj) {
+    out.push(x);
+  }
+  return out;
+}
